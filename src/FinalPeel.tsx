@@ -73,7 +73,7 @@ const FinalPeel: React.FC = () => {
               backfaceVisibility: 'hidden'
             }}
           >
-            <img src="/sticker_final.png" alt="Front" className="w-full h-full object-contain block" />
+            <img src="sticker_final.png" alt="Front" className="w-full h-full object-contain block" />
           </div>
           <div 
             className="flap"
@@ -89,7 +89,7 @@ const FinalPeel: React.FC = () => {
               backfaceVisibility: 'hidden'
             }}
           >
-            <img src="/back_final.png" alt="Back" className="w-full h-full object-contain block" />
+            <img src="back_final.png" alt="Back" className="w-full h-full object-contain block" />
           </div>
         </div>
       </div>

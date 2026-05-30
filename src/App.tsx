@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Logo Container - Absolute flush to top left */}
         <div className="relative h-20 w-48 cursor-pointer" onClick={handleStart}>
           <img 
-            src="/wildlogo.png" 
+            src="wildlogo.png" 
             alt="Wild West Logo" 
             className="absolute -top-20 -left-12 h-72 w-auto max-w-none object-contain pointer-events-none"
           />
@@ -67,7 +67,7 @@ const Navbar = () => {
         {/* Center: Centerpiece Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={handleStart}>
           <img 
-            src="/logotrans.png" 
+            src="logotrans.png" 
             alt="Center Logo" 
             className="h-24 w-auto object-contain"
           />
@@ -91,7 +91,7 @@ const Navbar = () => {
 };
 
 const BowlAnimation = () => {
-  const images = ['/q1.png', '/q2.png', '/q3.png', '/q4.png', '/q5.png', '/q6.png', '/q7.png', '/q8.png'];
+  const images = ['q1.png', 'q2.png', 'q3.png', 'q4.png', 'q5.png', 'q6.png', 'q7.png', 'q8.png'];
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -209,7 +209,7 @@ const Hero = () => {
           {/* Tempt Image (Top Layer - sitting in front of bowl bottom) */}
           <div className="hero-anim absolute w-full flex justify-center z-30 pointer-events-none translate-y-[35vw]">
             <img 
-              src="/temptlogo.png" 
+              src="temptlogo.png" 
               alt="Tempt" 
               className="w-[90vw] max-w-[1200px] h-auto object-contain"
             />
