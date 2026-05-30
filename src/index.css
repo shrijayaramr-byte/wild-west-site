@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Modak Local';
+  src: url('/fonts/Modak/Modak-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mouse Memoirs Local';
+  src: url('/fonts/Mouse_Memoirs/MouseMemoirs-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-moss: #2E4036;
+  --color-clay: #CC5833;
+  --color-cream: #F2F0E9;
+  --color-charcoal: #1A1A1A;
+  
+  --font-sans: "Plus Jakarta Sans", "Outfit", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply text-charcoal selection:bg-moss/20;
+    position: relative;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#noise);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+.drama-text {
+  @apply font-serif italic leading-[0.9] tracking-tighter;
+}
+
+.magnetic-btn {
+  @apply relative overflow-hidden transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] active:scale-95;
+}
+
+.magnetic-btn span {
+  @apply absolute inset-0 bg-charcoal translate-y-full transition-transform duration-500 ease-out;
+}
+
+.magnetic-btn:hover span {
+  @apply translate-y-0;
+}
+
+/* Centered 'The Burrito' Headline Styles */
+.burrito-text-wrapper-centered {
+  @apply cursor-pointer transition-transform duration-300 w-full flex justify-center;
+  transform-origin: 50% 90%;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.burrito-text-wrapper-centered:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.burrito-headline-centered {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: clamp(3rem, 26.5vw, 40rem);
+  @apply uppercase leading-[0.8] select-none text-center w-full inline-block whitespace-nowrap;
+  letter-spacing: clamp(1px, 0.3vw, 8px);
+  color: #F91814;
+  paint-order: stroke fill;
+  -webkit-text-stroke: clamp(4px, 0.9vw, 15px) #ffffff;
+}
+
+.loaded-headline {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: clamp(3rem, 15vw, 20rem);
+  @apply uppercase leading-[0.8] select-none text-center w-full inline-block mt-20 px-4;
+  letter-spacing: clamp(2px, 0.5vw, 10px);
+  color: #F91814;
+  paint-order: stroke fill;
+  -webkit-text-stroke: clamp(3px, 0.5vw, 10px) #ffffff;
+}
+
+.bold-flavor-hero {
+  @apply z-50 w-auto inline-block;
+  font-family: 'Modak Local', cursive;
+  font-size: clamp(1.5rem, 4vw, 7rem);
+  @apply uppercase leading-[0.8] select-none text-center;
+  letter-spacing: clamp(1px, 0.15vw, 3px);
+  color: #F4A804;
+  paint-order: stroke fill;
+  -webkit-text-stroke: clamp(2px, 0.6vw, 10px) #ffffff;
+}
+
+@media (max-width: 768px) {
+  .burrito-headline-centered {
+    -webkit-text-stroke: 5px #ffffff;
+  }
+}
